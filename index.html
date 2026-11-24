@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet the NexaTech operations workspace and see a sample dashboard.">
+  <title>Operations workspace | NexaTech Solutions</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-slate-50 font-sans text-navy antialiased">
+  <a class="sr-only z-20 rounded bg-white px-4 py-2 focus:not-sr-only focus:absolute focus:top-2 focus:left-2" href="#main">Skip to content</a>
+  <header class="relative z-10 border-b border-slate-200 bg-white">
+    <nav aria-label="Main navigation" class="mx-auto flex min-h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <a class="inline-flex items-center gap-2.5 rounded-sm font-bold tracking-tight" href="./index.html">
+        <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-navy text-sm text-cyan">N</span>
+        NexaTech <span class="-ml-1 hidden font-medium text-slate-500 sm:inline">Solutions</span>
+      </a>
+      <ul class="hidden items-center gap-1 md:flex">
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors bg-blue-50 text-royal" href="./index.html" aria-current="page">Home</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./product-card.html">Product Card</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./responsive-drill.html">Responsive Drill</a></li>
+      </ul>
+      <a class="hidden md:inline-flex min-h-11 items-center justify-center rounded-lg bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none" href="./product-card.html#catalog">Explore catalog</a>
+      <details class="md:hidden" id="mobile-menu">
+        <summary class="cursor-pointer list-none rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold [&::-webkit-details-marker]:hidden">Menu <span aria-hidden="true">+</span></summary>
+        <div class="absolute inset-x-0 top-full border-b border-slate-200 bg-white p-4 shadow-lg">
+          <ul class="mb-3 space-y-1">
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors bg-blue-50 text-royal" href="./index.html" aria-current="page">Home</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./product-card.html">Product Card</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./responsive-drill.html">Responsive Drill</a></li>
+          </ul>
+          <a class="w-full inline-flex min-h-11 items-center justify-center rounded-lg bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none" href="./product-card.html#catalog">Explore catalog</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1" class="grow">
+    <section aria-labelledby="hero-title" class="bg-linear-to-b from-white to-blue-50/80">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
+        <div class="min-w-0">
+          <p class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold tracking-wide text-royal"><span aria-hidden="true" class="size-2 rounded-full bg-electric"></span> Operations workspace</p>
+          <h1 id="hero-title" class="mt-5 max-w-xl text-4xl leading-tight font-bold tracking-tight sm:text-5xl lg:text-6xl">Run your business from <span class="text-royal">one clear view.</span></h1>
+          <p class="mt-5 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">Connect performance metrics, team priorities, and day-to-day operations in a shared workspace built for growing teams.</p>
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a class="inline-flex min-h-11 items-center justify-center rounded-lg bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy" href="./product-card.html">Explore products <span aria-hidden="true" class="ml-2">&rarr;</span></a>
+            <a class="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-royal hover:bg-blue-50" href="#dashboard-preview">View dashboard preview</a>
+          </div>
+          <dl class="mt-8 flex flex-wrap gap-x-7 gap-y-3 border-t border-blue-100 pt-5 text-sm">
+            <div><dt class="text-slate-600">Demo workspaces</dt><dd class="text-lg font-bold">120+</dd></div>
+            <div><dt class="text-slate-600">Sample satisfaction</dt><dd class="text-lg font-bold">4.9 / 5</dd></div>
+          </dl>
+          <p class="mt-2 text-xs text-slate-600">Illustrative figures for this fictional product.</p>
+        </div>
+        <figure id="dashboard-preview" class="min-w-0 scroll-mt-8 rounded-2xl border border-blue-200 bg-white shadow-xl shadow-blue-950/10">
+          <div class="flex flex-wrap items-center justify-between gap-2 rounded-t-2xl bg-navy px-4 py-3 text-white sm:px-5">
+            <span class="text-sm font-semibold">Operations overview</span>
+            <span class="rounded-full bg-white/10 px-2 py-1 text-xs text-blue-100">Sample workspace</span>
+          </div>
+          <div class="p-4 sm:p-5">
+            <div class="grid grid-cols-2 gap-2 sm:gap-3">
+              <div class="min-w-0 rounded-xl border border-slate-200 bg-slate-50 p-3"><p class="text-xs text-slate-600">Monthly revenue</p><p class="mt-1 text-lg font-bold tabular-nums sm:text-2xl">&#36;48,290</p></div>
+              <div class="min-w-0 rounded-xl border border-slate-200 bg-slate-50 p-3"><p class="text-xs text-slate-600">Project delivery</p><p class="mt-1 text-lg font-bold tabular-nums sm:text-2xl">94.2%</p></div>
+            </div>
+            <div class="mt-4 rounded-xl border border-slate-200 p-3 sm:p-4">
+              <p class="text-sm font-semibold">Revenue trend</p>
+              <p class="mt-1 text-xs text-slate-600">Sample monthly revenue rose from January to June.</p>
+              <div aria-hidden="true" class="mt-4 grid h-26 grid-cols-6 items-end gap-2 border-b border-slate-200 bg-linear-to-t from-blue-50 to-white px-1 sm:h-40 sm:gap-4">
+                <span class="h-1/4 rounded-t bg-blue-200"></span><span class="h-2/5 rounded-t bg-blue-300"></span><span class="h-1/2 rounded-t bg-blue-300"></span><span class="h-2/3 rounded-t bg-blue-400"></span><span class="h-3/5 rounded-t bg-electric"></span><span class="h-5/6 rounded-t bg-royal"></span>
+              </div>
+              <div aria-hidden="true" class="mt-2 grid grid-cols-6 gap-2 text-center text-xs text-slate-600 sm:gap-4">
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="border-t border-slate-100 px-4 py-3 text-sm text-slate-600 sm:px-5">Dashboard preview with sample data</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section aria-labelledby="customers-title" class="border-y border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <h2 id="customers-title" class="text-sm font-semibold text-slate-600">Fictional customer examples</h2>
+        <ul class="mt-3 flex flex-wrap items-center gap-x-9 gap-y-3 text-lg font-bold tracking-tight text-navy">
+          <li>Northstar Works</li><li>Meridian Supply</li><li>Harborline Studio</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <a class="w-fit font-semibold text-navy hover:underline" href="./index.html">NexaTech Solutions</a>
+      <p>Grids Apps Foundation Track &middot; Day 09</p>
+    </div>
+  </footer>
+</body>
+</html>

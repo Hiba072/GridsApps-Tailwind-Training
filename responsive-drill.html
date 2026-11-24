@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Six practical demonstrations of Tailwind responsive utilities.">
+  <title>Responsive variant drill | NexaTech Solutions</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-slate-50 font-sans text-navy antialiased">
+  <a class="sr-only z-20 rounded bg-white px-4 py-2 focus:not-sr-only focus:absolute focus:top-2 focus:left-2" href="#main">Skip to content</a>
+  <header class="relative z-10 border-b border-slate-200 bg-white">
+    <nav aria-label="Main navigation" class="mx-auto flex min-h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <a class="inline-flex items-center gap-2.5 rounded-sm font-bold tracking-tight" href="./index.html">
+        <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-navy text-sm text-cyan">N</span>
+        NexaTech <span class="-ml-1 hidden font-medium text-slate-500 sm:inline">Solutions</span>
+      </a>
+      <ul class="hidden items-center gap-1 md:flex">
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./index.html">Home</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./product-card.html">Product Card</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors bg-blue-50 text-royal" href="./responsive-drill.html" aria-current="page">Responsive Drill</a></li>
+      </ul>
+      <a class="hidden md:inline-flex min-h-11 items-center justify-center rounded-lg bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none" href="./product-card.html#catalog">Explore catalog</a>
+      <details class="md:hidden" id="mobile-menu">
+        <summary class="cursor-pointer list-none rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold [&::-webkit-details-marker]:hidden">Menu <span aria-hidden="true">+</span></summary>
+        <div class="absolute inset-x-0 top-full border-b border-slate-200 bg-white p-4 shadow-lg">
+          <ul class="mb-3 space-y-1">
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./index.html">Home</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors text-slate-600 hover:bg-slate-100 hover:text-navy" href="./product-card.html">Product Card</a></li>
+            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold transition-colors bg-blue-50 text-royal" href="./responsive-drill.html" aria-current="page">Responsive Drill</a></li>
+          </ul>
+          <a class="w-full inline-flex min-h-11 items-center justify-center rounded-lg bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none" href="./product-card.html#catalog">Explore catalog</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1" class="grow">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Responsive variant drill</h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">Resize the viewport to see how one set of utility classes adapts six layouts.</p>
+      <dl class="mt-6 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3 lg:grid-cols-6">
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">Base</dt><dd>All widths</dd></div>
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">sm</dt><dd>640px+</dd></div>
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">md</dt><dd>768px+</dd></div>
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">lg</dt><dd>1024px+</dd></div>
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">xl</dt><dd>1280px+</dd></div>
+        <div class="rounded-lg bg-blue-50 p-3"><dt class="font-bold">2xl</dt><dd>1536px+</dd></div>
+      </dl>
+      <div class="mt-8 grid gap-5">
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive grid</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4</code> moves from one column to four as space increases.</p>
+          <ul id="grid-demo" class="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <li class="rounded-lg bg-blue-50 p-3 font-medium text-royal">Revenue</li><li class="rounded-lg bg-blue-50 p-3 font-medium text-royal">Delivery</li><li class="rounded-lg bg-blue-50 p-3 font-medium text-royal">Workloads</li><li class="rounded-lg bg-blue-50 p-3 font-medium text-royal">Support</li>
+          </ul>
+        </section>
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive typography</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>text-lg sm:text-xl md:text-center lg:text-3xl</code> scales the text and centers it from medium widths.</p>
+          <p id="type-demo" class="mt-4 rounded-lg bg-blue-50 p-4 text-left text-lg font-bold text-royal sm:text-xl md:text-center lg:text-3xl">Weekly operations summary</p>
+        </section>
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive spacing</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>p-2 sm:p-4</code> expands the inner padding, <code>mt-3 md:mt-6</code> changes the outer spacing, and <code>gap-2 lg:gap-6</code> spreads out the items.</p>
+          <ul id="spacing-demo" class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-blue-50 p-2 sm:p-4 md:mt-6 lg:gap-6">
+            <li class="rounded bg-white p-2 text-sm font-medium text-royal">This week</li><li class="rounded bg-white p-2 text-sm font-medium text-royal">Last week</li>
+          </ul>
+        </section>
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive flexbox</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>flex-col md:flex-row md:justify-between</code> stacks the label and status first, then places them on one line.</p>
+          <div id="flex-demo" class="mt-4 flex flex-col gap-2 rounded-lg bg-blue-50 p-4 md:flex-row md:items-center md:justify-between">
+            <p class="font-semibold text-royal">Monthly report</p><p class="w-fit rounded-full bg-white px-3 py-1 text-sm text-royal">Ready to review</p>
+          </div>
+        </section>
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive visibility</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>hidden lg:inline</code> displays an extra time stamp from large widths. The report status stays visible at every width.</p>
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-lg bg-blue-50 p-4">
+            <p class="font-semibold text-royal">Report status: published</p><p id="visibility-demo" class="hidden text-sm text-slate-600 lg:inline">Sample timestamp &middot; 09:00 UTC</p>
+          </div>
+        </section>
+        <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <h2 class="text-xl font-bold">Responsive containers</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600"><code>w-full max-w-md mx-auto 2xl:max-w-2xl</code> lets the panel shrink on narrow screens and increases its centered maximum width on very wide screens.</p>
+          <p id="container-demo" class="mx-auto mt-4 w-full max-w-md rounded-lg bg-blue-50 p-4 text-center font-medium text-royal 2xl:max-w-2xl">Centered report panel</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <a class="w-fit font-semibold text-navy hover:underline" href="./index.html">NexaTech Solutions</a>
+      <p>Grids Apps Foundation Track &middot; Day 09</p>
+    </div>
+  </footer>
+</body>
+</html>
