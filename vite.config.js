@@ -2,19 +2,18 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
+const pages = [
+  'index', 'product-card', 'responsive-drill', 'dashboard', 'login', 'register',
+]
+
 export default defineConfig({
   base: './',
   plugins: [tailwindcss()],
   build: {
     rolldownOptions: {
-      input: {
-        home: fileURLToPath(new URL('./index.html', import.meta.url)),
-        products: fileURLToPath(new URL('./product-card.html', import.meta.url)),
-        drill: fileURLToPath(new URL('./responsive-drill.html', import.meta.url)),
-        dashboard: fileURLToPath(new URL('./dashboard.html', import.meta.url)),
-        login: fileURLToPath(new URL('./login.html', import.meta.url)),
-        register: fileURLToPath(new URL('./register.html', import.meta.url)),
-      },
+      input: Object.fromEntries(pages.map((page) => [
+        page, fileURLToPath(new URL(`./${page}.html`, import.meta.url)),
+      ])),
     },
   },
 })
