@@ -3,14 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard | NexaTech Solutions</title>
+  <meta name="description" content="Explore fictional business performance in the NexaTech analytics workspace.">
+  <title>Analytics Dashboard | NexaTech Solutions</title>
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="/src/dashboard.js"></script>
 </head>
-<body class="bg-slate-50 font-sans text-navy">
-  <main class="mx-auto max-w-7xl p-6">
-    <h1 class="text-3xl font-bold">Dashboard</h1>
-    <a class="text-royal underline" href="./index.html">NexaTech home</a>
-  </main>
+<body class="bg-slate-50 font-sans text-navy antialiased">
+  <a class="sr-only z-30 rounded bg-white px-4 py-2 focus:not-sr-only focus:absolute focus:top-2 focus:left-2" href="#dashboard-main">Skip to content</a>
+  <div class="mx-auto grid min-h-screen max-w-384 lg:grid-cols-[16rem_minmax(0,1fr)]">
+    <aside class="hidden bg-navy p-5 text-white lg:block">
+      <div class="sticky top-0 pt-2">
+        <a class="inline-flex items-center gap-2.5 font-bold tracking-tight focus-visible:outline-current" href="./index.html"><span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-royal text-sm text-cyan">N</span> NexaTech Solutions</a>
+        <nav data-dashboard-nav aria-label="Dashboard navigation" class="mt-8">
+
+        <div class="rounded-xl border border-white/15 bg-white/5 p-3">
+          <p class="text-xs text-blue-200">Workspace</p>
+          <p class="mt-1 text-sm font-semibold">NexaTech Operations</p>
+        </div>
+        <p class="mt-6 mb-2 px-3 text-xs font-semibold tracking-wide text-blue-200 uppercase">Workspace</p>
+        <ul class="space-y-1">
+            <li><a aria-current="location" class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#overview"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Overview</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#analytics"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M8 16v-4m5 4V8m5 8V5"/></svg>Analytics</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./product-card.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4m-9 4v10"/></svg>Products</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#recent-activity"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Recent activity</a></li>
+        </ul>
+        <p class="mt-6 mb-2 px-3 text-xs font-semibold tracking-wide text-blue-200 uppercase">Account</p>
+        <ul class="space-y-1">
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./index.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10H3zm6 10v-6h6v6"/></svg>Main website</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./login.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>Sign in</a></li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3 border-t border-white/15 pt-4">
+          <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-full bg-blue-100 text-xs font-bold text-royal">AM</span>
+          <div><p class="text-sm font-semibold">Alex Morgan</p><p class="text-xs text-blue-200">Demo workspace admin</p></div>
+        </div>
+        </nav>
+      </div>
+    </aside>
+    <div class="min-w-0">
+      <header class="relative z-10 border-b border-slate-200 bg-white">
+        <div class="flex min-h-18 items-center justify-between gap-3 px-4 sm:px-6 xl:px-8">
+          <details id="mobile-menu" class="lg:hidden">
+            <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-lg border border-slate-200 px-3 text-sm font-semibold [&::-webkit-details-marker]:hidden"><svg aria-hidden="true" class="size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Menu</span></summary>
+            <nav data-dashboard-nav aria-label="Mobile dashboard navigation" class="absolute inset-x-0 top-full max-h-[75dvh] overflow-y-auto border-b border-slate-700 bg-navy p-4 text-white shadow-xl sm:p-6">
+
+        <div class="rounded-xl border border-white/15 bg-white/5 p-3">
+          <p class="text-xs text-blue-200">Workspace</p>
+          <p class="mt-1 text-sm font-semibold">NexaTech Operations</p>
+        </div>
+        <p class="mt-6 mb-2 px-3 text-xs font-semibold tracking-wide text-blue-200 uppercase">Workspace</p>
+        <ul class="space-y-1">
+            <li><a aria-current="location" class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#overview"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Overview</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#analytics"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M8 16v-4m5 4V8m5 8V5"/></svg>Analytics</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./product-card.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4m-9 4v10"/></svg>Products</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="#recent-activity"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Recent activity</a></li>
+        </ul>
+        <p class="mt-6 mb-2 px-3 text-xs font-semibold tracking-wide text-blue-200 uppercase">Account</p>
+        <ul class="space-y-1">
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./index.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10H3zm6 10v-6h6v6"/></svg>Main website</a></li>
+            <li><a class="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-blue-100 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan aria-[current=location]:bg-white/15 aria-[current=location]:font-semibold aria-[current=location]:text-white" href="./login.html"><svg aria-hidden="true" class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>Sign in</a></li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3 border-t border-white/15 pt-4">
+          <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-full bg-blue-100 text-xs font-bold text-royal">AM</span>
+          <div><p class="text-sm font-semibold">Alex Morgan</p><p class="text-xs text-blue-200">Demo workspace admin</p></div>
+        </div>
+            </nav>
+          </details>
+          <a class="hidden text-sm font-semibold text-slate-600 hover:text-royal lg:inline-flex" href="./index.html">NexaTech Solutions <span aria-hidden="true" class="px-2">/</span> Workspace</a>
+          <div class="flex items-center gap-2 sm:gap-3">
+            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-royal transition-colors hover:bg-blue-50" href="./login.html">Sign in</a>
+            <a class="rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold transition-colors hover:bg-slate-50" href="./register.html">Register</a>
+          </div>
+        </div>
+      </header>
+      <main id="dashboard-main" tabindex="-1" class="px-4 py-7 sm:px-6 sm:py-9 xl:px-8">
+        <section id="overview" aria-labelledby="overview-title">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="text-xs font-semibold tracking-widest text-royal uppercase">NexaTech Operations</p>
+              <h1 id="overview-title" class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Dashboard overview</h1>
+              <p class="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">Track revenue, customer demand, and recent orders for your workspace.</p>
+            </div>
+            <div class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-2">
+              <p class="text-xs text-royal">Reporting period</p>
+              <p class="text-sm font-semibold"><time datetime="2026-05">May 2026</time></p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-600">All dashboard data is fictional and provided for demonstration.</p>
+          <ul id="kpi-grid" class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4" aria-label="Key performance indicators">
+          <li class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-5">
+            <div class="flex items-start justify-between gap-2"><h2 class="pt-1 text-sm font-semibold text-slate-600">Total revenue</h2><span class="grid size-9 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20m5-15H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H6"/></svg></span></div>
+            <p class="mt-2 text-2xl font-bold tracking-tight tabular-nums">$48,290</p>
+            <p class="mt-2 text-xs text-slate-600"><strong class="text-emerald-800">Up 12.4%</strong> vs. April</p>
+          </li>
+          <li class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-5">
+            <div class="flex items-start justify-between gap-2"><h2 class="pt-1 text-sm font-semibold text-slate-600">Active customers</h2><span class="grid size-9 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span></div>
+            <p class="mt-2 text-2xl font-bold tracking-tight tabular-nums">1,284</p>
+            <p class="mt-2 text-xs text-slate-600"><strong class="text-emerald-800">Up 8.2%</strong> vs. April</p>
+          </li>
+          <li class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-5">
+            <div class="flex items-start justify-between gap-2"><h2 class="pt-1 text-sm font-semibold text-slate-600">Total orders</h2><span class="grid size-9 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="15" rx="2"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></span></div>
+            <p class="mt-2 text-2xl font-bold tracking-tight tabular-nums">362</p>
+            <p class="mt-2 text-xs text-slate-600"><strong class="text-emerald-800">Up 5.6%</strong> vs. April</p>
+          </li>
+          <li class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-5">
+            <div class="flex items-start justify-between gap-2"><h2 class="pt-1 text-sm font-semibold text-slate-600">Conversion rate</h2><span class="grid size-9 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 7-8m-6 0h6v6"/></svg></span></div>
+            <p class="mt-2 text-2xl font-bold tracking-tight tabular-nums">3.8%</p>
+            <p class="mt-2 text-xs text-slate-600"><strong class="text-rose-800">Down 0.3 pp</strong> vs. April</p>
+          </li>
+          </ul>
+        </section>
+        <section id="analytics" aria-labelledby="analytics-title" class="mt-8">
+          <h2 id="analytics-title" class="text-xl font-bold tracking-tight">Analytics</h2>
+          <div class="mt-4 grid gap-4 xl:grid-cols-3">
+            <figure class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-6 xl:col-span-2" aria-labelledby="revenue-title">
+              <h3 id="revenue-title" class="text-lg font-bold">Weekly revenue</h3>
+              <p class="mt-1 text-sm text-slate-600">May 2026 · Sales grouped by reporting week</p>
+              <dl class="mt-5 grid grid-cols-4 items-end gap-2 sm:gap-5">
+                <div class="grid min-w-0 gap-1 text-center"><dt class="row-start-3 text-xs text-slate-600">May 4</dt><dd class="row-start-1 row-span-2 grid gap-1 text-xs font-bold tabular-nums sm:text-sm">$8.2k<div aria-hidden="true" class="flex h-32 items-end rounded-t-lg bg-slate-50 sm:h-40"><span class="h-[47%] w-full rounded-t-lg bg-royal"></span></div></dd></div>
+                <div class="grid min-w-0 gap-1 text-center"><dt class="row-start-3 text-xs text-slate-600">May 11</dt><dd class="row-start-1 row-span-2 grid gap-1 text-xs font-bold tabular-nums sm:text-sm">$10.4k<div aria-hidden="true" class="flex h-32 items-end rounded-t-lg bg-slate-50 sm:h-40"><span class="h-[59%] w-full rounded-t-lg bg-royal"></span></div></dd></div>
+                <div class="grid min-w-0 gap-1 text-center"><dt class="row-start-3 text-xs text-slate-600">May 18</dt><dd class="row-start-1 row-span-2 grid gap-1 text-xs font-bold tabular-nums sm:text-sm">$12.1k<div aria-hidden="true" class="flex h-32 items-end rounded-t-lg bg-slate-50 sm:h-40"><span class="h-[69%] w-full rounded-t-lg bg-royal"></span></div></dd></div>
+                <div class="grid min-w-0 gap-1 text-center"><dt class="row-start-3 text-xs text-slate-600">May 25</dt><dd class="row-start-1 row-span-2 grid gap-1 text-xs font-bold tabular-nums sm:text-sm">$17.6k<div aria-hidden="true" class="flex h-32 items-end rounded-t-lg bg-slate-50 sm:h-40"><span class="h-full w-full rounded-t-lg bg-royal"></span></div></dd></div>
+              </dl>
+              <figcaption class="mt-4 border-t border-slate-100 pt-3 text-xs leading-relaxed text-slate-600">Weekly revenue rose from $8.2k in the first reporting week to $17.6k in the final week.</figcaption>
+            </figure>
+            <section aria-labelledby="product-revenue-title" class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-6">
+              <h3 id="product-revenue-title" class="text-lg font-bold">Revenue by product</h3>
+              <p class="mt-1 text-sm text-slate-600">Share of May revenue</p>
+              <dl class="mt-5 space-y-5">
+                <div><dt class="text-sm font-semibold">Insight Hub</dt><dd class="mt-1 flex items-center justify-between gap-2 text-sm tabular-nums text-slate-600"><span>$23,180</span><span>48%</span></dd><div aria-hidden="true" class="mt-2 h-2 rounded-full bg-blue-50"><div class="h-full w-[48%] rounded-full bg-royal"></div></div></div>
+                <div><dt class="text-sm font-semibold">Workflow Studio</dt><dd class="mt-1 flex items-center justify-between gap-2 text-sm tabular-nums text-slate-600"><span>$15,456</span><span>32%</span></dd><div aria-hidden="true" class="mt-2 h-2 rounded-full bg-blue-50"><div class="h-full w-[32%] rounded-full bg-royal"></div></div></div>
+                <div><dt class="text-sm font-semibold">Operations Desk</dt><dd class="mt-1 flex items-center justify-between gap-2 text-sm tabular-nums text-slate-600"><span>$9,654</span><span>20%</span></dd><div aria-hidden="true" class="mt-2 h-2 rounded-full bg-blue-50"><div class="h-full w-1/5 rounded-full bg-royal"></div></div></div>
+              </dl>
+            </section>
+          </div>
+        </section>
+        <div class="mt-8 grid items-start gap-4 2xl:grid-cols-3">
+          <section aria-labelledby="orders-title" class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden 2xl:col-span-2">
+            <div class="px-4 pt-5 sm:px-6">
+              <h2 id="orders-title" class="text-xl font-bold">Recent orders</h2>
+              <p id="table-hint" class="mt-1 text-sm text-slate-600">Latest sample transactions. Scroll horizontally on smaller screens.</p>
+            </div>
+            <div id="orders-scroll" role="region" aria-labelledby="orders-title" aria-describedby="table-hint" tabindex="0" class="mt-4 overflow-x-auto focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-royal">
+              <table class="w-full min-w-xl border-collapse text-left text-sm">
+                <caption class="sr-only">Recent orders for May 2026</caption>
+                <thead class="border-y border-slate-200 bg-slate-50 text-xs text-slate-600">
+                  <tr><th scope="col" class="px-4 py-3">Order ID</th><th scope="col" class="px-3 py-3">Customer</th><th scope="col" class="px-3 py-3">Product</th><th scope="col" class="px-3 py-3">Date</th><th scope="col" class="px-3 py-3 text-right">Amount</th><th scope="col" class="px-4 py-3">Status</th></tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="transition-colors hover:bg-blue-50/60"><th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap">NY-1048</th><td class="px-3 py-4">Northstar Works</td><td class="px-3 py-4">Insight Hub</td><td class="px-3 py-4 whitespace-nowrap">May 29</td><td class="px-3 py-4 text-right tabular-nums">$348</td><td class="px-4 py-4"><span class="rounded-full px-2.5 py-1 text-xs font-semibold bg-emerald-50 text-emerald-800">Completed</span></td></tr>
+                  <tr class="transition-colors hover:bg-blue-50/60"><th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap">NY-1047</th><td class="px-3 py-4">Meridian Supply</td><td class="px-3 py-4">Workflow Studio</td><td class="px-3 py-4 whitespace-nowrap">May 27</td><td class="px-3 py-4 text-right tabular-nums">$588</td><td class="px-4 py-4"><span class="rounded-full px-2.5 py-1 text-xs font-semibold bg-blue-50 text-royal">Processing</span></td></tr>
+                  <tr class="transition-colors hover:bg-blue-50/60"><th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap">NY-1046</th><td class="px-3 py-4">Harborline Studio</td><td class="px-3 py-4">Insight Hub</td><td class="px-3 py-4 whitespace-nowrap">May 24</td><td class="px-3 py-4 text-right tabular-nums">$348</td><td class="px-4 py-4"><span class="rounded-full px-2.5 py-1 text-xs font-semibold bg-amber-50 text-amber-900">Pending</span></td></tr>
+                  <tr class="transition-colors hover:bg-blue-50/60"><th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap">NY-1045</th><td class="px-3 py-4">Aster Goods</td><td class="px-3 py-4">Operations Desk</td><td class="px-3 py-4 whitespace-nowrap">May 21</td><td class="px-3 py-4 text-right tabular-nums">$948</td><td class="px-4 py-4"><span class="rounded-full px-2.5 py-1 text-xs font-semibold bg-rose-50 text-rose-800">Cancelled</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="recent-activity" aria-labelledby="activity-title" class="min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-6">
+            <h2 id="activity-title" class="text-xl font-bold">Recent activity</h2>
+            <ol class="mt-2 divide-y divide-slate-100">
+              <li class="flex items-start gap-3 py-3"><span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><div><p class="text-sm font-semibold">New customer registered</p><p class="mt-0.5 text-xs leading-relaxed text-slate-600">Northstar Works joined the sample workspace. <time datetime="2026-05-29" class="whitespace-nowrap">May 29</time></p></div></li>
+              <li class="flex items-start gap-3 py-3"><span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="15" rx="2"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></span><div><p class="text-sm font-semibold">New order received</p><p class="mt-0.5 text-xs leading-relaxed text-slate-600">Order NY-1048 was placed for Insight Hub. <time datetime="2026-05-29" class="whitespace-nowrap">May 29</time></p></div></li>
+              <li class="flex items-start gap-3 py-3"><span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20m5-15H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H6"/></svg></span><div><p class="text-sm font-semibold">Payment completed</p><p class="mt-0.5 text-xs leading-relaxed text-slate-600">Meridian Supply settled its April invoice. <time datetime="2026-05-27" class="whitespace-nowrap">May 27</time></p></div></li>
+              <li class="flex items-start gap-3 py-3"><span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4m-9 4v10"/></svg></span><div><p class="text-sm font-semibold">Product updated</p><p class="mt-0.5 text-xs leading-relaxed text-slate-600">Workflow Studio received a catalog update. <time datetime="2026-05-24" class="whitespace-nowrap">May 24</time></p></div></li>
+              <li class="flex items-start gap-3 py-3"><span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-royal"><svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM9 12h6m-6 4h6"/></svg></span><div><p class="text-sm font-semibold">Monthly report generated</p><p class="mt-0.5 text-xs leading-relaxed text-slate-600">The April operations summary was archived. <time datetime="2026-05-21" class="whitespace-nowrap">May 21</time></p></div></li>
+            </ol>
+          </section>
+        </div>
+      </main>
+      <footer class="border-t border-slate-200 px-4 py-5 text-sm text-slate-600 sm:px-6 xl:px-8">NexaTech Solutions &middot; Grids Apps Foundation Track</footer>
+    </div>
+  </div>
 </body>
 </html>
