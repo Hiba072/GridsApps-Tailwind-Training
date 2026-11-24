@@ -68,6 +68,9 @@ Implemented six practical demonstrations covering:
 | index.html | SaaS Hero and dashboard preview |
 | product-card.html | Responsive product catalog |
 | responsive-drill.html | Tailwind responsive utility demonstrations |
+| dashboard.html | Admin sidebar, analytics, recent orders, and activity |
+| login.html | Demo sign-in form and validation states |
+| register.html | Demo registration form and validation states |
 
 ## Project Features
 
@@ -150,7 +153,7 @@ The utility-first approach and how mobile-first responsive variants adapt layout
 
 **What remains incomplete?**
 
-Git commits are pending repository author configuration. Additional Tailwind challenges will be completed in the upcoming training days.
+Day 09 was committed and pushed to GitHub. Further Tailwind challenges are covered in later training days.
 
 ## Day 09 Progress
 
@@ -162,7 +165,94 @@ Git commits are pending repository author configuration. Additional Tailwind cha
 - [x] Production build verification
 - [x] Responsive testing
 - [x] Project documentation
-- [ ] Git commits
+- [x] Git commit and GitHub push
+
+---
+
+## Day 10 – Tailwind Responsive Components & Dashboard
+
+Day 10 extends NexaTech Solutions with a responsive analytics workspace and two authentication form demos. The dashboard uses fictional data, and the forms validate sample entries locally.
+
+### Learning Objectives
+
+- Use mobile-first breakpoints to adapt navigation, Grid, and Flexbox layouts.
+- Build consistent dashboard cards and responsive data displays.
+- Use state variants to make hover, focus, errors, and disabled controls clear.
+
+### T04 – Admin Sidebar
+
+The desktop sidebar groups workspace and account links, identifies the active section, and includes a demo profile summary. On mobile and tablet, an expandable menu provides the same links. Escape and section selection close the menu and restore focus to its control.
+
+### T05 – Analytics Dashboard
+
+Four KPI cards display revenue, active customers, orders, and conversion rate. The dashboard also includes a labeled weekly revenue chart, revenue by product, a recent orders table, and an activity list. The KPI grid grows from one column to two at `sm` and four at `xl`. The orders table scrolls within its own keyboard-focusable region on narrow screens.
+
+### Authentication Form States
+
+The login and registration cards demonstrate hover, keyboard focus, checked and disabled controls, and valid and invalid fields. Both forms offer password visibility controls. Registration also checks password confirmation and acknowledgement of the demo terms. Errors appear after a submission attempt, identify the affected input, and clear when corrected. Successful submissions display a demo message and clear the form.
+
+### Accessibility
+
+- Keyboard-operable navigation with visible focus and an active section indicator.
+- Form labels, associated error text, and focus on the first invalid field.
+- Chart labels with a text summary, semantic table headings, and written status badges.
+
+### Testing & Quality Assurance
+
+- The Vite development server ran successfully. The production build included all six HTML pages, and each opened in production preview.
+- Headless Chrome passed all 42 page and viewport combinations at 320, 375, 640, 768, 1024, 1280, and 1536 px. Checks covered navigation, images, responsive layouts, table scrolling, and Day 09 regressions.
+- Keyboard checks covered visible focus, Escape, section navigation, and focus restoration. Form checks covered required fields, invalid email, short and mismatched passwords, checkbox validation, password visibility, and successful demo feedback.
+- Fixed mobile dashboard focus after section navigation. The final run recorded zero browser console or resource errors.
+
+### Screenshots
+
+#### Dashboard
+
+![NexaTech analytics dashboard at 1280 pixels](screenshots/dashboard-1280.png)
+
+#### Login
+
+![NexaTech sign-in page at 1280 pixels](screenshots/login-1280.png)
+
+#### Register
+
+![NexaTech registration page at 1280 pixels](screenshots/register-1280.png)
+
+#### Mobile Design
+
+| Dashboard | Login | Register |
+| --- | --- | --- |
+| ![Dashboard at 375 pixels](screenshots/dashboard-375.png) | ![Sign-in at 375 pixels](screenshots/login-375.png) | ![Registration at 375 pixels](screenshots/register-375.png) |
+
+### Day 10 Exit Ticket
+
+Draft for student review and personalization.
+
+**What did I build today?**
+
+I built a responsive admin sidebar and analytics dashboard, plus login and registration cards with local validation.
+
+**What bug or difficulty did I solve?**
+
+Selecting a dashboard section from the mobile menu initially cleared keyboard focus. I moved focus restoration after the browser's section jump.
+
+**What concept can I explain clearly?**
+
+I can explain how `sm:grid-cols-2` and `xl:grid-cols-4` adapt the KPI grid, and how `focus-visible:` and `disabled:` style controls based on their state.
+
+**What remains incomplete?**
+
+Day 10 is ready for review before I push it to GitHub. Later challenges and real authentication are outside this exercise.
+
+### Day 10 Progress
+
+- [x] T04 – Admin Sidebar
+- [x] T05 – Analytics Dashboard
+- [x] Login and registration form states
+- [x] Six-page Vite build
+- [x] Browser testing and screenshots
+- [x] Day 10 documentation
+- [ ] Day 10 push after review
 
 ---
 

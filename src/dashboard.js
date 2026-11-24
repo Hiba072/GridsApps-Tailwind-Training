@@ -20,8 +20,13 @@ updateCurrentSection()
 window.addEventListener('hashchange', updateCurrentSection)
 
 mobileNav.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileNav.open = false
-    menuButton.focus({ preventScroll: true })
+  link.addEventListener('click', (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
+
+    // The fragment jump runs first so it cannot clear the restored focus.
+    requestAnimationFrame(() => {
+      mobileNav.open = false
+      menuButton.focus({ preventScroll: true })
+    })
   })
 })
