@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 const pages = [
   'index', 'product-card', 'responsive-drill', 'dashboard', 'login', 'register',
+  'pricing', 'customers', 'orders', 'analytics', 'reports', 'settings', 'profile',
 ]
 
 export default defineConfig({
